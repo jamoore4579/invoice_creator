@@ -10,7 +10,7 @@ class invoice_create:
         self.root.geometry("1350x700+0+0")
         self.root.title("Create Invoice")
         bg_color = "#5596e0"
-        title = Label(self.root, text="Create Invoice", font=('times new roman', 30, 'bold'), pady=2, bd=12, bg="#5596e0", fg="Black", relief=GROOVE)
+        title = Label(self.root, text="Create Invoice", font=('times new roman', 30, 'bold'), pady=2, bd=12, bg="bg_color", fg="Black", relief=GROOVE)
         title.pack(fill=X)
     # ==============Mowing============
         self.mowing = IntVar()
@@ -40,6 +40,14 @@ class invoice_create:
         F1.place(x=0, y=80, relwidth=1)
         cname_lbl = Label(F1, text="Customer Name:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cname_lbl.grid(row=0, column=0, padx=20, pady=5)
+        cname_txt = Entry(F1, width=15, textvariable=self.c_name, font='arial 15', bd=7, relief=GROOVE)
+        cname_txt.grid(row=0, column=1, pady=5, padx=10)
+
+        cphone_lbl = Label(F1, text="Customer Phone:", bg="bg_color", font=('times new roman', 15, 'bold'))
+        cphone_lbl.grid(row=0, column=2, padx=20, pady=5)
+        cphone_txt = Entry(F1, width=15, textvariable=self.c_phone, font='arial 15', bd=7, relief=GROOVE)
+        cphone_txt.grid(row=0, column=3, pady=5, padx=10)
+
         
 root = Tk()
 obj = invoice_create(root)
