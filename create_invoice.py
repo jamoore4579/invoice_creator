@@ -37,7 +37,9 @@ class invoice_create:
         self.landscape_tax = StringVar()
     # ==========Customer Retail===========
         F1 = LabelFrame(self.root, text="Customer Details", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg="#5595e0")
-        
+        F1.place(x=0, y=80, relwidth=1)
+        cname_lbl = Label(F1, text="Customer Name:", bg=bg_color, font=('times new roman', 15, 'bold'))
+        cname_lbl.grid(row=0, column=0, padx=20, pady=5)
         
 root = Tk()
 obj = invoice_create(root)
