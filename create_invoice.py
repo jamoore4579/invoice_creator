@@ -48,6 +48,9 @@ class invoice_create:
         cphone_txt = Entry(F1, width=15, textvariable=self.cust_phone, font='arial 15', bd=7, relief=GROOVE)
         cphone_txt.grid(row=0, column=3, pady=5, padx=10)
 
+        cbill_lbl = Label(F1, text="Bill Number:", bg=bg_color, font=('times new roman', 15, 'bold'))
+        cbill_lbl.grid(row=0, column=4, padx=20, pady=5)
+
         
 root = Tk()
 obj = invoice_create(root)
