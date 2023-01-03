@@ -51,6 +51,7 @@ class invoice_create:
         cbill_lbl = Label(F1, text="Bill Number:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cbill_lbl.grid(row=0, column=4, padx=20, pady=5)
 
+
         
 root = Tk()
 obj = invoice_create(root)
