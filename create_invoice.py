@@ -50,6 +50,17 @@ class invoice_create:
 
         cbill_lbl = Label(F1, text="Bill Number:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cbill_lbl.grid(row=0, column=4, padx=20, pady=5)
+        cbill_txt = Entry(F1, width=15, textvariable=self.search_bill, font='arial 15', bd=7, relief=GROOVE)
+        cbill_txt.grid(row=0, column=5, pady=5, padx=10)
+
+        bil_btn = Button(F1, text="Search", command=self.find_bill, width=10, bd=7, font=('arial', 12, 'bold'), relief=GROOVE)
+        bil_btn.grid(row=0, column=6, pady=5, padx=10)
+    # ===========Find Bill=================
+    def find_bill(self):
+        present = "no"
+        for i in os.listdir("bills/"):
+            if i.split('.')[0] == self.search_bill.get():
+                f1 = open(f"bills/{i}", "r")
 
 
         
