@@ -36,7 +36,7 @@ class invoice_create:
         self.mowing_tax = StringVar()
         self.landscape_tax = StringVar()
     # ==========Customer Retail===========
-        F1 = LabelFrame(self.root, text="Customer Details", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg="#5595e0")
+        F1 = LabelFrame(self.root, text="Customer Details", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
         F1.place(x=0, y=80, relwidth=1)
         cname_lbl = Label(F1, text="Customer Name:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cname_lbl.grid(row=0, column=0, padx=20, pady=5)
@@ -55,6 +55,12 @@ class invoice_create:
 
         bil_btn = Button(F1, text="Search", command=self.find_bill, width=10, bd=7, font=('arial', 12, 'bold'), relief=GROOVE)
         bil_btn.grid(row=0, column=6, pady=5, padx=10)
+    # ==============Mowing=================
+        F2 = LabelFrame(self.root, text="Mowing Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
+        F2.place(x=5, y=180, width=390, height=380)
+    # ==============Landscaping============
+        F3 = LabelFrame(self.root, text="Landscaping Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
+        F3.place(x=340, y=180, width=390, height=380)
     # ===========Find Bill=================
     def find_bill(self):
         present = "no"
