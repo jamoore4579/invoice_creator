@@ -57,11 +57,17 @@ class invoice_create:
         bil_btn.grid(row=0, column=6, pady=5, padx=10)
     # ==============Mowing=================
         F2 = LabelFrame(self.root, text="Mowing Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
-        F2.place(x=5, y=180, width=390, height=380)
+        F2.place(x=0, y=180, width=440, height=380)
+
+        mowing_lbl = Label(F2, text="Mowing", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        mowing_lbl.grid(row=0, column=0, padx=10, pady=10, sticky='W')
+        mowing_txt = Entry(F2, width=10, textvariable=self.mowing, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        mowing_txt.grid(row=0, column=1, padx=10, pady=10)
+
     # ==============Landscaping============
         F3 = LabelFrame(self.root, text="Landscaping Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
-        F3.place(x=340, y=180, width=390, height=380)
-    # ===========Find Bill=================
+        F3.place(x=440, y=180, width=440, height=380)
+    # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
         for i in os.listdir("bills/"):
