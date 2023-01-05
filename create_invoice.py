@@ -82,6 +82,27 @@ class invoice_create:
     # ==============Landscaping============
         F3 = LabelFrame(self.root, text="Landscaping Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
         F3.place(x=440, y=180, width=440, height=380)
+
+        cleanup_lbl = Label(F3, text="Clean-up", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        cleanup_lbl.grid(row=0, column=2, padx=10, pady=10, sticky='W')
+        cleanup_txt = Entry(F3, width=10, textvariable=self.cleanup, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        cleanup_txt.grid(row=0, column=3, padx=10, pady=10)
+
+        paper_lbl = Label(F3, text="Paper", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        paper_lbl.grid(row=1, column=2, padx=10, pady=10, sticky='W')
+        paper_txt = Entry(F3, width=10, textvariable=self.paper, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        paper_txt.grid(row=1, column=3, padx=10, pady=10)
+
+        mulch_lbl = Label(F3, text="Mulch", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        mulch_lbl.grid(row=2, column=2, padx=10, pady=10, sticky='W')
+        mulch_txt = Entry(F3, width=10, textvariable=self.mulch, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        mulch_txt.grid(row=2, column=3, padx=10, pady=10)
+
+        rock_lbl = Label(F3, text="Rock", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        rock_lbl.grid(row=3, column=2, padx=10, pady=10, sticky='W')
+        rock_txt = Entry(F3, width=10, textvariable=self.rock, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        rock_txt.grid(row=3, column=3, padx=10, pady=10)
+
     # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
