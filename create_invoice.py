@@ -65,9 +65,19 @@ class invoice_create:
         mowing_txt.grid(row=0, column=1, padx=10, pady=10)
 
         trimming_lbl = Label(F2, text="Trimming", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
-        trimming_lbl.grid(row=0, column=0, padx=10, pady=10, sticky='W')
+        trimming_lbl.grid(row=1, column=0, padx=10, pady=10, sticky='W')
         trimming_txt = Entry(F2, width=10, textvariable=self.trimming, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
-        trimming_txt.grid(row=0, column=1, padx=10, pady=10)
+        trimming_txt.grid(row=1, column=1, padx=10, pady=10)
+
+        edging_lbl = Label(F2, text="Edging", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        edging_lbl.grid(row=2, column=0, padx=10, pady=10, sticky='W')
+        edging_txt = Entry(F2, width=10, textvariable=self.edging, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        edging_txt.grid(row=2, column=1, padx=10, pady=10)
+
+        blowing_lbl = Label(F2, text="Blowing", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        blowing_lbl.grid(row=3, column=0, padx=10, pady=10, sticky='W')
+        blowing_txt = Entry(F2, width=10, textvariable=self.edging, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        blowing_txt.grid(row=3, column=1, padx=10, pady=10)
 
     # ==============Landscaping============
         F3 = LabelFrame(self.root, text="Landscaping Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
