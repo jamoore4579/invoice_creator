@@ -64,6 +64,11 @@ class invoice_create:
         mowing_txt = Entry(F2, width=10, textvariable=self.mowing, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         mowing_txt.grid(row=0, column=1, padx=10, pady=10)
 
+        trimming_lbl = Label(F2, text="Trimming", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
+        trimming_lbl.grid(row=0, column=0, padx=10, pady=10, sticky='W')
+        trimming_txt = Entry(F2, width=10, textvariable=self.trimming, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        trimming_txt.grid(row=0, column=1, padx=10, pady=10)
+
     # ==============Landscaping============
         F3 = LabelFrame(self.root, text="Landscaping Services", font=('times new roman', 15, 'bold'), bd=10, fg="Black", bg=bg_color)
         F3.place(x=440, y=180, width=440, height=380)
