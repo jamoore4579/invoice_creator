@@ -109,7 +109,11 @@ class invoice_create:
 
         bill_title = Label(F5, text="Customer Invoice", font='arial 15 bold', bd=7, relief=GROOVE)
         bill_title.pack(fill=X)
-        
+        scroll_y = Scrollbar(F5, orient=VERTICAL)
+        self.txtarea = Text(F5, yscrollcommand=scroll_y.set)
+        scroll_y.pack(side=RIGHT, fill=Y)
+        scroll_y.config(command=self.txtarea.yview)
+        self.txtarea.pack(fill=BOTH, expand=1)
 
     # =========================Find Bill==========================
     def find_bill(self):
