@@ -103,6 +103,14 @@ class invoice_create:
         rock_txt = Entry(F3, width=10, textvariable=self.rock, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
         rock_txt.grid(row=3, column=3, padx=10, pady=10)
 
+    # ==========================Bill Area=========================
+        F5 = Frame(self.root, bd=10, relief=GROOVE)
+        F5.place(x=1010, y=180, width=350, height=380)
+
+        bill_title = Label(F5, text="Customer Invoice", font='arial 15 bold', bd=7, relief=GROOVE)
+        bill_title.pack(fill=X)
+        
+
     # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
