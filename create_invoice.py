@@ -24,7 +24,7 @@ class invoice_create:
         self.rock = IntVar()
     # =======Total Product Price==========
         self.mowing_price = StringVar()
-        self.lanscape_price = StringVar()
+        self.landscape_price = StringVar()
     # ===========Customer=================
         self.cust_name = StringVar()
         self.cust_phone = StringVar()
@@ -121,6 +121,11 @@ class invoice_create:
         m1_lbl.grid(row=0, column=0, padx=20, pady=1, sticky='W')
         m1_txt = Entry(F6, width=18, textvariable=self.mowing_price, font='arial 10 bold', bd=7, relief=GROOVE)
         m1_txt.grid(row=0, column=1, padx=18, pady=1)
+
+        m2_lbl = Label(F6, text="Total Landscaping Price", font=('times new roman', 14, 'bold'), bg=bg_color, fg="black")
+        m2_lbl.grid(row=0, column=2, padx=20, pady=1, sticky='W')
+        m2_txt = Entry(F6, width=18, textvariable=self.landscape_price, font='arial 10 bold', bd=7, relief=GROOVE)
+        m2_txt.grid(row=0, column=3, padx=18, pady=1)
 
     # =========================Find Bill==========================
     def find_bill(self):
