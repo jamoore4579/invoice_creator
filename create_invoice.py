@@ -32,9 +32,7 @@ class invoice_create:
         x = random.randint(1000, 9999)
         self.bill_no.set(str(x))
         self.search_bill = StringVar()
-    # ==============Tax==================
-        self.mowing_tax = StringVar()
-        self.landscape_tax = StringVar()
+    
     # ==========Customer Retail===========
         F1 = LabelFrame(self.root, text="Customer Details", font=('times new roman', 15, 'bold'), bd=10, fg="black", bg=bg_color)
         F1.place(x=0, y=80, relwidth=1)
@@ -118,6 +116,11 @@ class invoice_create:
     # ========================Button Frame========================
         F6 = LabelFrame(self.root, text="Bill Area", font=('times new roman', 14, 'bold'), bd=10, fg="black", bg=bg_color)
         F6.place(x=0, y=560, relwidth=1, height=140)
+
+        m1_lbl = Label(F6, text="Total Mowing Price", font=('times new roman', 14, 'bold'), bg=bg_color, fg="black")
+        m1_lbl.grid(row=0, column=0, padx=20, pady=1, sticky='W')
+        m1_txt = Entry(F6, width=18, textvariable=self.mowing_price, font='arial 10 bold', bd=7, relief=GROOVE)
+        m1_txt.grid(row=0, column=1, padx=18, pady=1)
 
     # =========================Find Bill==========================
     def find_bill(self):
