@@ -127,6 +127,12 @@ class invoice_create:
         m2_txt = Entry(F6, width=18, textvariable=self.landscape_price, font='arial 10 bold', bd=7, relief=GROOVE)
         m2_txt.grid(row=0, column=3, padx=18, pady=1)
 
+    # =======================Buttons==============================
+        btn_frame = Frame(F6, bd=7, relief=GROOVE)
+        btn_frame.place(x=760, width=580, height=105)
+
+        
+
     # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
