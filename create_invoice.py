@@ -153,8 +153,12 @@ class invoice_create:
         self.total_mowing_price = float(self.mowing_price_fm+self.trimming_price_fm+self.edging_price_fm+self.blowing_price_fm)
 
         self.cleanup_price_fm = self.cleanup.get()*60
-        self.paper_price_fm = 
+        self.paper_price_fm = self.paper.get()*10
+        self.mulch_price_fm = self.mulch.get()*30
+        self.rock_price_fm = self.rock.get()*40
+        self.total_landscape_price = float(self.cleanup_price_fm+self.paper_price_fm+self.mulch_price_fm+self.rock_price_fm)
         
+        self.total_bill = float(self.total_mowing_price+self.total_landscape_price)
 
 # =========================Find Bill==========================
     def find_bill(self):
