@@ -131,9 +131,32 @@ class invoice_create:
         btn_frame = Frame(F6, bd=7, relief=GROOVE)
         btn_frame.place(x=760, width=580, height=105)
 
+        total_btn = Button(btn_frame, command=self.total, text="Total", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
+        total_btn.grid(row=0, column=0, padx=5, pady=5)
+
+        generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=12, width=12, font='arial 13 bold')
+        generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
+
+        clear_btn = Button(btn_frame, command=self.clear_date, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
+        clear_btn.grid(row=0, column=2, padx=5, pady=5)
+
+        exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 13 bold')
+        exit_btn.grid(row=0, column=3, padx=5, pady=5)
+        self.welcome_bill()
+
+# =========================Total Bill=========================
+    def total(self):
+        self.mowing_price_fm = self.mowing.get()*50
+        self.trimming_price_fm = self.trimming.get()*10
+        self.edging_price_fm = self.edging.get()*5
+        self.blowing_price_fm = self.blowing.get()*5
+        self.total_mowing_price = float(self.mowing_price_fm+self.trimming_price_fm+self.edging_price_fm+self.blowing_price_fm)
+
+        self.cleanup_price_fm = self.cleanup.get()*60
+        self.paper_price_fm = 
         
 
-    # =========================Find Bill==========================
+# =========================Find Bill==========================
     def find_bill(self):
         present = "no"
         for i in os.listdir("bills/"):
