@@ -134,14 +134,14 @@ class invoice_create:
         total_btn = Button(btn_frame, command=self.total, text="Total", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
         total_btn.grid(row=0, column=0, padx=5, pady=5)
 
-        generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=12, width=12, font='arial 13 bold')
-        generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
+        #==generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=12, width=12, font='arial 13 bold')
+        #==generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
 
-        clear_btn = Button(btn_frame, command=self.clear_date, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
-        clear_btn.grid(row=0, column=2, padx=5, pady=5)
+        #==clear_btn = Button(btn_frame, command=self.clear_date, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
+        #==clear_btn.grid(row=0, column=2, padx=5, pady=5)
 
-        exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 13 bold')
-        exit_btn.grid(row=0, column=3, padx=5, pady=5)
+        #==exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 13 bold')
+        #==exit_btn.grid(row=0, column=3, padx=5, pady=5)
         self.welcome_bill()
 
 # =========================Total Bill=========================
