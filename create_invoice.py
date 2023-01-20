@@ -160,6 +160,9 @@ class invoice_create:
         
         self.total_bill = float(self.total_mowing_price+self.total_landscape_price)
 
+# =======================Welcome Bill=========================
+
+
 # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
