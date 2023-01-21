@@ -160,10 +160,15 @@ class invoice_create:
         
         self.total_bill = float(self.total_mowing_price+self.total_landscape_price)
 
-# =======================Welcome Bill=========================
+# =======================Invoice=========================
     def welcome_bill(self):
         self.txtarea.delete('1.0', END)
-        self.txtarea.insert(END, "\tWelcome We Care Moore")
+        self.txtarea.insert(END, "\tWe Care Moore Invoice")
+        self.txtarea.insert(END, f"\nBill Number:{self.bill_no.get()}")
+        self.txtarea.insert(END, f"\nCustomer Name:{self.cust_name.get()}")
+        self.txtarea.insert(END, f"\nPhone Number: {self.cust_phone.get()}")
+        self.txtarea.insert(END, f"\n=====================================")
+        self.txtarea.insert(END, f"\nProducts\t\tQTY\t\tPrice")
 
 # =========================Find Bill==========================
     def find_bill(self):
