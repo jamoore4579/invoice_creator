@@ -198,15 +198,32 @@ class invoice_create:
             self.txtarea.insert(END, f"\n Mulch\t\t{self.mulch.get()}\t\t{self.mulch_price_fm}")
         if self.rock.get() != 0:
             self.txtarea.insert(END, f"\n Rock\t\t{self.rock.get()}\t\t{self.rock_price_fm}")
-        
-    # =================Total==========================
             self.txtarea.insert(END, f"\n--------------------------------------")
+
             self.txtarea.insert(END, f"\n Total Bill:\t\t\t Rs.{self.total_bill}")
             self.txtarea.insert(END, f"\n--------------------------------------")
             self.save_bill()
+        
     
     # ====================Save Bill====================
-    
+        def save_bill(self):
+            op = messagebox.askyesno("Save Bill", "Do you want to save bill?")
+            if op > 0:
+                self.bill_data = self.txtarea.get('1.0', END)
+                f1 = open("bills/"+str(self.bill_no.get())+".txt", "w")
+                f1.write(self.bill_data)
+                f1.close()
+                messagebox.showinfo("Saved", f"Bill no:{self.bill_no.get()} Saved Successfully")
+            else:
+                return
+
+    # ===================Find Bill======================
+        def find_bill(self):
+            present = "no"
+            for i in os.listdir("bills/"):
+                if i.split('.')[0] == self.search_bill.get():
+                    f1 = open(f"bills/{i}", "r")
+
 
 # =========================Find Bill==========================
     def find_bill(self):
