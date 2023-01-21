@@ -170,6 +170,15 @@ class invoice_create:
         self.txtarea.insert(END, f"\n=====================================")
         self.txtarea.insert(END, f"\nProducts\t\tQTY\t\tPrice")
 
+# ====================Bill Area==========================
+    def bill_area(self):
+        if self.cust_name.get() == " " or self.cust_phone.get() == " ":
+            messagebox.showerror("Error", "Customer Details Are a Must")
+        elif self.mowing_price.get() == "Rs. 0.0" and self.landscape_price.get() == "Rs. 0.0":
+            messagebox.showerror("Error", "No Product Purchased")
+        else:
+            self.welcome_bill()
+
 # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
