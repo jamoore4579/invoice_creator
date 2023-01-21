@@ -188,8 +188,16 @@ class invoice_create:
             self.txtarea.insert(END, f"\n Edging\t\t{self.edging.get()}\t\t{self.edging_price_fm}")
         if self.blowing.get() != 0:
             self.txtarea.insert(END, f"\n Blowing\t\t{self.blowing.get()}\t\t{self.blowing_price_fm}")
-            
+
     # ================Landscape======================
+        if self.cleanup.get() != 0:
+            self.txtarea.insert(END, f"\n Cleanup\t\t{self.cleanup.get()}\t\t{self.cleanup_price_fm}")
+        if self.paper.get() != 0:
+            self.txtarea.insert(END, f"\n Paper\t\t{self.paper.get()}\t\t{self.paper_price_fm}")
+        if self.mulch.get() != 0:
+            self.txtarea.insert(END, f"\n Mulch\t\t{self.mulch.get()}\t\t{self.mulch_price_fm}")
+        if self.rock.get() != 0:
+            self.txtarea.insert(END, f"\n Rock\t\t{self.rock.get()}\t\t{self.rock_price_fm}")
 
 # =========================Find Bill==========================
     def find_bill(self):
