@@ -179,6 +179,18 @@ class invoice_create:
         else:
             self.welcome_bill()
 
+    # ==================Mowing=======================
+        if self.mowing.get() != 0:
+            self.txtarea.insert(END, f"\n Mowing\t\t{self.mowing.get()}\t\t{self.mowing_price_fm}")
+        if self.trimming.get() != 0:
+            self.txtarea.insert(END, f"\n Trimming\t\t{self.trimming.get()}\t\t{self.trimming_price_fm}")
+        if self.edging.get() != 0:
+            self.txtarea.insert(END, f"\n Edging\t\t{self.edging.get()}\t\t{self.edging_price_fm}")
+        if self.blowing.get() != 0:
+            self.txtarea.insert(END, f"\n Blowing\t\t{self.blowing.get()}\t\t{self.blowing_price_fm}")
+            
+    # ================Landscape======================
+
 # =========================Find Bill==========================
     def find_bill(self):
         present = "no"
