@@ -233,15 +233,35 @@ class invoice_create:
     
     # ===============Clear Bill===================
         def clear_data(sefl):
-            
+            op = messagebox.askyesno("Clear", "Do you really want to Clear?")
+            if op > 0:
+                self.mowing.set(0)
+                self.trimming.set(0)
+                self.edging.set(0)
+                self.blowing.set(0)
+                # ======================
+                self.cleanup.set(0)
+                self.paper.set(0)
+                self.mulch.set(0)
+                self.rock.set(0)
+                # ============================
+                self.mowing_price.set("")
+                self.landscape_price.set("")
+                # ============================
+                self.cust_name.set("")
+                self.cust_phone.set("")
+                self.bill_no.set("")
+                x = random.randint(1000, 9999)
+                self.bill_no.set(str(x))
+                # ============================
+                self.search_bill.set("")
+                self.welcome_bill()
 
-
-# =========================Find Bill==========================
-    def find_bill(self):
-        present = "no"
-        for i in os.listdir("bills/"):
-            if i.split('.')[0] == self.search_bill.get():
-                f1 = open(f"bills/{i}", "r")
+    # ===============Exit==============================
+    def exit_app(self):
+        op = messagebox.askyesno("Exit", "Do you really want to exit?")
+        if op > 0:
+            self.root.destroy()
 
 
         
