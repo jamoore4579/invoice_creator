@@ -134,14 +134,14 @@ class invoice_create:
         total_btn = Button(btn_frame, command=self.total, text="Total", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
         total_btn.grid(row=0, column=0, padx=5, pady=5)
 
-        #==generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=12, width=12, font='arial 13 bold')
-        #==generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
+        generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=12, width=12, font='arial 13 bold')
+        generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
 
-        #==clear_btn = Button(btn_frame, command=self.clear_date, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
-        #==clear_btn.grid(row=0, column=2, padx=5, pady=5)
+        clear_btn = Button(btn_frame, command=self.clear_data, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 13 bold')
+        clear_btn.grid(row=0, column=2, padx=5, pady=5)
 
-        #==exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 13 bold')
-        #==exit_btn.grid(row=0, column=3, padx=5, pady=5)
+        exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 13 bold')
+        exit_btn.grid(row=0, column=3, padx=5, pady=5)
         self.welcome_bill()
 
 # =========================Total Bill=========================
@@ -205,59 +205,59 @@ class invoice_create:
             self.save_bill()
         
     
-    # ====================Save Bill====================
-        def save_bill(self):
-            op = messagebox.askyesno("Save Bill", "Do you want to save bill?")
-            if op > 0:
-                self.bill_data = self.txtarea.get('1.0', END)
-                f1 = open("bills/"+str(self.bill_no.get())+".txt", "w")
-                f1.write(self.bill_data)
-                f1.close()
-                messagebox.showinfo("Saved", f"Bill no:{self.bill_no.get()} Saved Successfully")
-            else:
-                return
+# ====================Save Bill====================
+    def save_bill(self):
+        op = messagebox.askyesno("Save Bill", "Do you want to save bill?")
+        if op > 0:
+            self.bill_data = self.txtarea.get('1.0', END)
+            f1 = open("bills/"+str(self.bill_no.get())+".txt", "w")
+            f1.write(self.bill_data)
+            f1.close()
+            messagebox.showinfo("Saved", f"Bill no:{self.bill_no.get()} Saved Successfully")
+        else:
+            return
 
-    # ===================Find Bill======================
-        def find_bill(self):
-            present = "no"
-            for i in os.listdir("bills/"):
-                if i.split('.')[0] == self.search_bill.get():
-                    f1 = open(f"bills/{i}", "r")
-                    self.txtarea.delete("1.0", END)
-                    for d in f1:
-                        self.txtarea.insert(END, d)
-                        f1.close()
-                    present = "yes"
-            if present =="no":
-                messagebox.showerror("Error", "Invalid Bill No")
+# ===================Find Bill======================
+    def find_bill(self):
+        present = "no"
+        for i in os.listdir("bills/"):
+            if i.split('.')[0] == self.search_bill.get():
+                f1 = open(f"bills/{i}", "r")
+                self.txtarea.delete("1.0", END)
+                for d in f1:
+                    self.txtarea.insert(END, d)
+                    f1.close()
+                present = "yes"
+        if present =="no":
+            messagebox.showerror("Error", "Invalid Bill No")
     
-    # ===============Clear Bill===================
-        def clear_data(sefl):
-            op = messagebox.askyesno("Clear", "Do you really want to Clear?")
-            if op > 0:
-                self.mowing.set(0)
-                self.trimming.set(0)
-                self.edging.set(0)
-                self.blowing.set(0)
-                # ======================
-                self.cleanup.set(0)
-                self.paper.set(0)
-                self.mulch.set(0)
-                self.rock.set(0)
-                # ============================
-                self.mowing_price.set("")
-                self.landscape_price.set("")
-                # ============================
-                self.cust_name.set("")
-                self.cust_phone.set("")
-                self.bill_no.set("")
-                x = random.randint(1000, 9999)
-                self.bill_no.set(str(x))
-                # ============================
-                self.search_bill.set("")
-                self.welcome_bill()
+# ===============Clear Bill===================
+    def clear_data(self):
+        op = messagebox.askyesno("Clear", "Do you really want to Clear?")
+        if op > 0:
+            self.mowing.set(0)
+            self.trimming.set(0)
+            self.edging.set(0)
+            self.blowing.set(0)
+            # ======================
+            self.cleanup.set(0)
+            self.paper.set(0)
+            self.mulch.set(0)
+            self.rock.set(0)
+            # ============================
+            self.mowing_price.set("")
+            self.landscape_price.set("")
+            # ============================
+            self.cust_name.set("")
+            self.cust_phone.set("")
+            self.bill_no.set("")
+            x = random.randint(1000, 9999)
+            self.bill_no.set(str(x))
+            # ============================
+            self.search_bill.set("")
+            self.welcome_bill()
 
-    # ===============Exit==============================
+# ===============Exit==============================
     def exit_app(self):
         op = messagebox.askyesno("Exit", "Do you really want to exit?")
         if op > 0:
