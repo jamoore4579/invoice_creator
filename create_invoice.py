@@ -132,16 +132,16 @@ class invoice_create:
         btn_frame.place(x=800, width=520, height=95)
 
         total_btn = Button(btn_frame, command=self.total, text="Total", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 10 bold')
-        total_btn.grid(row=0, column=0, padx=5, pady=5)
+        total_btn.grid(row=0, column=0, padx=6, pady=7)
 
         generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 10 bold')
-        generateBill_btn.grid(row=0, column=1, padx=5, pady=5)
+        generateBill_btn.grid(row=0, column=1, padx=6, pady=7)
 
         clear_btn = Button(btn_frame, command=self.clear_data, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 10 bold')
-        clear_btn.grid(row=0, column=2, padx=5, pady=5)
+        clear_btn.grid(row=0, column=2, padx=6, pady=7)
 
         exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 10 bold')
-        exit_btn.grid(row=0, column=3, padx=5, pady=5)
+        exit_btn.grid(row=0, column=3, padx=6, pady=7)
         self.welcome_bill()
 
 # =========================Total Bill=========================
