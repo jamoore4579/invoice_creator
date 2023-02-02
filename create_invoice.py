@@ -2,6 +2,8 @@ from tkinter import *
 import random
 import os
 from tkinter import messagebox
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph
 
 # ==========Main Screen===========
 class invoice_create:
@@ -165,7 +167,7 @@ class invoice_create:
 # =======================Invoice=========================
     def welcome_bill(self):
         self.txtarea.delete('1.0', END)
-        self.txtarea.insert(END, "\tWe Care Moore Invoice")
+        self.txtarea.insert(END, "\tHarrys Hardware Store Invoice")
         self.txtarea.insert(END, f"\nBill Number:{self.bill_no.get()}")
         self.txtarea.insert(END, f"\nCustomer Name:{self.cust_name.get()}")
         self.txtarea.insert(END, f"\nPhone Number: {self.cust_phone.get()}")
@@ -265,6 +267,17 @@ class invoice_create:
         if op > 0:
             self.root.destroy()
 
+# create a new PDF document
+doc = SimpleDocTemplate("form.pdf", pagesize=letter)
+
+# add some content to the form
+elements = []
+elements.append(Paragraph("Name: ____________"))
+elements.append(Paragraph("Address: ____________"))
+elements.append(Paragraph("Phone: ____________"))
+
+# build the PDF document
+doc.build(elements)
 
         
 root = Tk()
