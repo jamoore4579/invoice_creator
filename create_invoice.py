@@ -139,11 +139,14 @@ class invoice_create:
         generateBill_btn = Button(btn_frame, command=self.bill_area, text="Generate Bill", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 10 bold')
         generateBill_btn.grid(row=0, column=1, padx=6, pady=7)
 
+        saveBill_btn = Button(btn_frame, command=self.save_bill, text="Save Bill", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 10 bold')
+        saveBill_btn.grid(row=0, column=2, padx=6, pady=7)
+
         clear_btn = Button(btn_frame, command=self.clear_data, text="Clear", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 10 bold')
-        clear_btn.grid(row=0, column=2, padx=6, pady=7)
+        clear_btn.grid(row=0, column=3, padx=6, pady=7)
 
         exit_btn = Button(btn_frame, command=self.exit_app, text="Exit", bd=2, bg=bg_color, fg="white", pady=15, width=12, font='arial 10 bold')
-        exit_btn.grid(row=0, column=3, padx=6, pady=7)
+        exit_btn.grid(row=0, column=4, padx=6, pady=7)
         self.welcome_bill()
 
 # =========================Total Bill=========================
@@ -214,7 +217,7 @@ class invoice_create:
         op = messagebox.askyesno("Save Bill", "Do you want to save bill?")
         if op > 0:
             self.bill_data = self.txtarea.get('1.0', END)
-            f1 = open("bills/"+str(self.bill_no.get())+".txt", "w")
+            f1 = open("/home/jmoore/Documents/Projects/invoice_creator/bills/"+str(self.bill_no.get())+".txt", "w")
             f1.write(self.bill_data)
             f1.close()
             messagebox.showinfo("Saved", f"Bill no:{self.bill_no.get()} Saved Successfully")

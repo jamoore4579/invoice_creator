@@ -1,0 +1,6 @@
+	Harrys Hardware Store Invoice
+Bill Number:9862
+Customer Name:
+Phone Number: 
+=====================================
+Products		QTY		Price
