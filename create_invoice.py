@@ -11,8 +11,8 @@ class invoice_create:
         self.root = root
         self.root.geometry("1350x700+0+0")
         self.root.title("Create Invoice")
-        bg_color = "#5596e0"
-        title = Label(self.root, text="Create Invoice", font=('times new roman', 30, 'bold'), pady=2, bd=12, bg=bg_color, fg="black", relief=GROOVE)
+        bg_color = "#c71818"
+        title = Label(self.root, text="Create Invoice", font=('times new roman', 30, 'bold'), pady=2, bd=2, bg=bg_color, fg="black", relief=RAISED)
         title.pack(fill=X)
     # ==============Mowing============
         self.mowing = IntVar()
@@ -40,20 +40,20 @@ class invoice_create:
         F1.place(x=0, y=80, relwidth=1)
         cname_lbl = Label(F1, text="Customer Name:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cname_lbl.grid(row=0, column=0, padx=20, pady=5)
-        cname_txt = Entry(F1, width=15, textvariable=self.cust_name, font='arial 15', bd=7, relief=GROOVE)
+        cname_txt = Entry(F1, width=15, textvariable=self.cust_name, font='arial 15', bd=7, relief=RAISED)
         cname_txt.grid(row=0, column=1, pady=5, padx=10)
 
         cphone_lbl = Label(F1, text="Customer Phone:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cphone_lbl.grid(row=0, column=2, padx=20, pady=5)
-        cphone_txt = Entry(F1, width=15, textvariable=self.cust_phone, font='arial 15', bd=7, relief=GROOVE)
+        cphone_txt = Entry(F1, width=15, textvariable=self.cust_phone, font='arial 15', bd=7, relief=RAISED)
         cphone_txt.grid(row=0, column=3, pady=5, padx=10)
 
         cbill_lbl = Label(F1, text="Bill Number:", bg=bg_color, font=('times new roman', 15, 'bold'))
         cbill_lbl.grid(row=0, column=4, padx=20, pady=5)
-        cbill_txt = Entry(F1, width=15, textvariable=self.search_bill, font='arial 15', bd=7, relief=GROOVE)
+        cbill_txt = Entry(F1, width=15, textvariable=self.search_bill, font='arial 15', bd=7, relief=RAISED)
         cbill_txt.grid(row=0, column=5, pady=5, padx=10)
 
-        bil_btn = Button(F1, text="Search", command=self.find_bill, width=10, bd=7, font=('arial', 12, 'bold'), relief=GROOVE)
+        bil_btn = Button(F1, text="Search", command=self.find_bill, width=10, bd=7, font=('arial', 12, 'bold'), relief=RAISED)
         bil_btn.grid(row=0, column=6, pady=5, padx=10)
     # ==============Mowing=================
         F2 = LabelFrame(self.root, text="Mowing Services", font=('times new roman', 15, 'bold'), bd=10, fg="black", bg=bg_color)
@@ -61,22 +61,22 @@ class invoice_create:
 
         mowing_lbl = Label(F2, text="Mowing", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         mowing_lbl.grid(row=0, column=0, padx=10, pady=10, sticky='W')
-        mowing_txt = Entry(F2, width=10, textvariable=self.mowing, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        mowing_txt = Entry(F2, width=10, textvariable=self.mowing, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         mowing_txt.grid(row=0, column=1, padx=10, pady=10)
 
         trimming_lbl = Label(F2, text="Trimming", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         trimming_lbl.grid(row=1, column=0, padx=10, pady=10, sticky='W')
-        trimming_txt = Entry(F2, width=10, textvariable=self.trimming, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        trimming_txt = Entry(F2, width=10, textvariable=self.trimming, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         trimming_txt.grid(row=1, column=1, padx=10, pady=10)
 
         edging_lbl = Label(F2, text="Edging", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         edging_lbl.grid(row=2, column=0, padx=10, pady=10, sticky='W')
-        edging_txt = Entry(F2, width=10, textvariable=self.edging, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        edging_txt = Entry(F2, width=10, textvariable=self.edging, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         edging_txt.grid(row=2, column=1, padx=10, pady=10)
 
         blowing_lbl = Label(F2, text="Blowing", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         blowing_lbl.grid(row=3, column=0, padx=10, pady=10, sticky='W')
-        blowing_txt = Entry(F2, width=10, textvariable=self.blowing, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        blowing_txt = Entry(F2, width=10, textvariable=self.blowing, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         blowing_txt.grid(row=3, column=1, padx=10, pady=10)
 
     # ==============Landscaping============
@@ -85,29 +85,29 @@ class invoice_create:
 
         cleanup_lbl = Label(F3, text="Clean-up", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         cleanup_lbl.grid(row=0, column=2, padx=10, pady=10, sticky='W')
-        cleanup_txt = Entry(F3, width=10, textvariable=self.cleanup, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        cleanup_txt = Entry(F3, width=10, textvariable=self.cleanup, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         cleanup_txt.grid(row=0, column=3, padx=10, pady=10)
 
         paper_lbl = Label(F3, text="Paper", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         paper_lbl.grid(row=1, column=2, padx=10, pady=10, sticky='W')
-        paper_txt = Entry(F3, width=10, textvariable=self.paper, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        paper_txt = Entry(F3, width=10, textvariable=self.paper, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         paper_txt.grid(row=1, column=3, padx=10, pady=10)
 
         mulch_lbl = Label(F3, text="Mulch", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         mulch_lbl.grid(row=2, column=2, padx=10, pady=10, sticky='W')
-        mulch_txt = Entry(F3, width=10, textvariable=self.mulch, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        mulch_txt = Entry(F3, width=10, textvariable=self.mulch, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         mulch_txt.grid(row=2, column=3, padx=10, pady=10)
 
         rock_lbl = Label(F3, text="Rock", font=('times new roman', 16, 'bold'), bg=bg_color, fg="black")
         rock_lbl.grid(row=3, column=2, padx=10, pady=10, sticky='W')
-        rock_txt = Entry(F3, width=10, textvariable=self.rock, font=('times new roman', 16, 'bold'), bd=5, relief=GROOVE)
+        rock_txt = Entry(F3, width=10, textvariable=self.rock, font=('times new roman', 16, 'bold'), bd=5, relief=RAISED)
         rock_txt.grid(row=3, column=3, padx=10, pady=10)
 
     # ==========================Bill Area=========================
-        F5 = Frame(self.root, bd=10, relief=GROOVE)
+        F5 = Frame(self.root, bd=10, relief=RAISED)
         F5.place(x=880, y=180, width=470, height=380)
 
-        bill_title = Label(F5, text="Customer Invoice", font='arial 15 bold', bd=7, relief=GROOVE)
+        bill_title = Label(F5, text="Customer Invoice", font='arial 15 bold', bd=7, relief=RAISED)
         bill_title.pack(fill=X)
         scroll_y = Scrollbar(F5, orient=VERTICAL)
         self.txtarea = Text(F5, yscrollcommand=scroll_y.set)
@@ -121,16 +121,16 @@ class invoice_create:
 
         m1_lbl = Label(F6, text="Total Mowing Price", font=('times new roman', 14, 'bold'), bg=bg_color, fg="black")
         m1_lbl.grid(row=0, column=0, padx=20, pady=1, sticky='W')
-        m1_txt = Entry(F6, width=18, textvariable=self.mowing_price, font='arial 10 bold', bd=7, relief=GROOVE)
+        m1_txt = Entry(F6, width=18, textvariable=self.mowing_price, font='arial 10 bold', bd=7, relief=RAISED)
         m1_txt.grid(row=0, column=1, padx=18, pady=1)
 
         m2_lbl = Label(F6, text="Total Landscaping Price", font=('times new roman', 14, 'bold'), bg=bg_color, fg="black")
         m2_lbl.grid(row=0, column=2, padx=20, pady=1, sticky='W')
-        m2_txt = Entry(F6, width=18, textvariable=self.landscape_price, font='arial 10 bold', bd=7, relief=GROOVE)
+        m2_txt = Entry(F6, width=18, textvariable=self.landscape_price, font='arial 10 bold', bd=7, relief=RAISED)
         m2_txt.grid(row=0, column=3, padx=18, pady=1)
 
     # =======================Buttons==============================
-        btn_frame = Frame(F6, bd=7, relief=GROOVE)
+        btn_frame = Frame(F6, bd=7, relief=RAISED)
         btn_frame.place(x=800, width=520, height=95)
 
         total_btn = Button(btn_frame, command=self.total, text="Total", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 10 bold')
