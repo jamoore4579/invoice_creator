@@ -268,16 +268,16 @@ class invoice_create:
             self.root.destroy()
 
 # create a new PDF document
-doc = SimpleDocTemplate("form.pdf", pagesize=letter)
+# doc = SimpleDocTemplate("form.pdf", pagesize=letter)
 
 # add some content to the form
-elements = []
-elements.append(Paragraph("Name: ____________"))
-elements.append(Paragraph("Address: ____________"))
-elements.append(Paragraph("Phone: ____________"))
+# elements = []
+# elements.append(Paragraph("Name: ____________"))
+# elements.append(Paragraph("Address: ____________"))
+# elements.append(Paragraph("Phone: ____________"))
 
 # build the PDF document
-doc.build(elements)
+# doc.build(elements)
 
         
 root = Tk()
