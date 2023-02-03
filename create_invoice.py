@@ -116,22 +116,22 @@ class invoice_create:
         self.txtarea.pack(fill=BOTH, expand=1)
     
     # ========================Button Frame========================
-        F6 = LabelFrame(self.root, text="Bill Area", font=('times new roman', 14, 'bold'), bd=10, fg="black", bg=bg_color)
+        F6 = LabelFrame(self.root, text="Bill Area", font=('times new roman', 14, 'bold'), bd=1, fg="black", bg=bg_color)
         F6.place(x=0, y=560, relwidth=1, height=140)
 
         m1_lbl = Label(F6, text="Total Mowing Price", font=('times new roman', 14, 'bold'), bg=bg_color, fg="black")
-        m1_lbl.grid(row=0, column=0, padx=20, pady=1, sticky='W')
-        m1_txt = Entry(F6, width=18, textvariable=self.mowing_price, font='arial 10 bold', bd=7, relief=RAISED)
-        m1_txt.grid(row=0, column=1, padx=18, pady=1)
+        m1_lbl.grid(row=0, column=0, padx=15, pady=1, sticky='W')
+        m1_txt = Entry(F6, width=10, textvariable=self.mowing_price, font='arial 10 bold', bd=1, relief=RAISED)
+        m1_txt.grid(row=0, column=1, padx=15, pady=1)
 
         m2_lbl = Label(F6, text="Total Landscaping Price", font=('times new roman', 14, 'bold'), bg=bg_color, fg="black")
-        m2_lbl.grid(row=0, column=2, padx=20, pady=1, sticky='W')
-        m2_txt = Entry(F6, width=18, textvariable=self.landscape_price, font='arial 10 bold', bd=7, relief=RAISED)
-        m2_txt.grid(row=0, column=3, padx=18, pady=1)
+        m2_lbl.grid(row=0, column=2, padx=15, pady=1, sticky='W')
+        m2_txt = Entry(F6, width=10, textvariable=self.landscape_price, font='arial 10 bold', bd=1, relief=RAISED)
+        m2_txt.grid(row=0, column=3, padx=15, pady=1)
 
     # =======================Buttons==============================
-        btn_frame = Frame(F6, bd=7, relief=RAISED)
-        btn_frame.place(x=800, width=520, height=95)
+        btn_frame = Frame(F6, bd=1, relief=RAISED)
+        btn_frame.place(x=650, width=660, height=95)
 
         total_btn = Button(btn_frame, command=self.total, text="Total", bg=bg_color, bd=2, fg="white", pady=15, width=12, font='arial 10 bold')
         total_btn.grid(row=0, column=0, padx=6, pady=7)
